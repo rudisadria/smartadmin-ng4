@@ -1,3 +1,12 @@
+# Smart Admin Changes by rudisadria
+1. Upgrade Angular version from 4.1.5 to 4.4.1
+2. Added dynamic navigation menu from rest-json
+3. Added authentication security mechanism using JWT Token:
+	- Main page is login page, and if already login will be route to "home"
+	- Added authentication guard in "home" page, if not login will route to "login"
+	- Added idle mechanism, if no activity in period of time, angular will force sign out and route to "login"
+	- Added logout mechanism
+
 # Smartadmin
 
 [live](https://sang2-shockwave.rhcloud.com) demo
