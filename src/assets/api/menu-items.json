@@ -1,0 +1,10 @@
+ [
+      { "order": 11, "label": "Ini Dynamic Menu", "icon": "fa fa-lg fa-fw fa-home", "subMenu": [
+          { "order": 1, "label": "Analytics Dashboard", "icon": "", "url": "/home/dashboard/analytics", "subMenu": []  },
+          { "order": 2, "label": "Social Wall", "icon": "", "url": "/home/dashboard/social", "subMenu": []  },
+          { "order": 3, "label": "Sigma Dynamic Form", "icon": "", "url": "/home/sigma", "subMenu": []  }
+        ], "url": "#" },
+        { "order": 12, "label": "Underwriting", "icon": "fa fa-lg fa-fw fa-home",  "url": "#" ,"subMenu": [
+          { "order": 1, "label": "Test Pages", "icon": "", "url": "/home/askrindo/underwriting/test", "subMenu": []  }
+        ]}
+]

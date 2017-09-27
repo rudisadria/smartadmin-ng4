@@ -1,0 +1,71 @@
+<div id="content">
+    <sa-widgets-grid>
+        <div class="row">
+            <article class="col-sm-12 col-md-12 col-lg-6">
+                <sa-widget [editbutton]="false" [custombutton]="false" [deletebutton]="false">
+                    <header>
+                        <span class="widget-icon"> <i class="fa fa-edit"></i> </span>
+
+                        <h2> ini judulnya</h2>
+
+                    </header>
+
+                    <!-- widget div-->
+                    <div>
+
+
+                        <!-- widget content -->
+                        <div class="widget-body no-padding">
+
+                            <form #form="ngForm" class="smart-form" (ngSubmit)="onSubmit(form)">
+                                <header>
+                                    ini Header Per Section/Grouping
+                                </header>
+                                <!-- <div class="form-group">
+                                        <label class="col-md-2 control-label">Text field</label>
+                                        <div class="col-md-10">
+                                          <input class="form-control" placeholder="Default Text Field" type="text">
+                                        </div>
+                                      </div> -->
+
+                                <fieldset>
+                                    <div class="row">
+                                        <label class="label col col-4">Expiration date</label>
+                                        <section class="col col-8">
+                                            <label [ngClass]="{'input':true, 'state-success':form.controls.textValue?.valid, 'state-error':form.controls.textValue?.invalid}">
+                                                            <i class="icon-append fa fa-user"></i>                                    
+                                                          <input type="text" name="textValue" [(ngModel)]="textValue" placeholder="Please input this field" required ngModel/>
+                                                          <b class="tooltip tooltip-bottom-right">ini tooltip</b> 	
+                                                          </label>
+                                            <span *ngIf="form.controls.textValue?.errors?.required" class="help-block has-error"><i class="fa fa-warning"></i>This field required</span>
+                                        </section>
+                                    </div>
+                                    <div class="row">
+                                        <label class="label col col-4">Expiration date</label>
+                                        <section class="col col-10">
+                                                <label [ngClass]="{'input':true, 'state-success':form.controls.textValue?.valid, 'state-error':form.controls.textValue?.invalid}">
+                                                                        <i class="icon-append fa fa-user"></i>                                    
+                                                                      <input type="text" name="textValue" [(ngModel)]="textValue" placeholder="Please input this field" required ngModel/>
+                                                                      <b class="tooltip tooltip-bottom-right">ini tooltip</b> 	
+                                                                      </label>
+                                            <span *ngIf="form.controls.textValue?.errors?.required" class="help-block has-error"><i class="fa fa-warning"></i>This field required</span>
+                                        </section>
+                                    </div>
+                                </fieldset>
+                                <footer>
+                                    {{form.value | json}}
+                                    <button type="submit" class="btn btn-primary" [disabled]="form.invalid">Submit</button>
+                                </footer>
+                            </form>
+
+                        </div>
+                        <!-- end widget content -->
+
+                    </div>
+                    <!-- end widget div -->
+
+                </sa-widget>
+            </article>
+        </div>
+    </sa-widgets-grid>
+</div>

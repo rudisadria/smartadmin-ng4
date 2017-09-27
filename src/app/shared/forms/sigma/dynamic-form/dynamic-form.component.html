@@ -1,0 +1,62 @@
+<div id="content">
+<sa-widgets-grid>
+<div class="row">
+<article class="col-sm-12 col-md-12 col-lg-6">
+        <sa-widget [editbutton]="false" [custombutton]="false" [deletebutton]="false">			
+          <header>
+            <span class="widget-icon"> <i class="fa fa-edit"></i> </span>
+
+            <h2> {{sigmaForm.header}}</h2>            
+
+          </header>
+
+          <!-- widget div-->
+          <div>
+
+
+            <!-- widget content -->
+            <div class="widget-body no-padding">
+
+				<form id="order-form" *ngIf="form" class="smart-form" [formGroup]="form">
+				  <header>
+				    {{sigmaForm.header}}
+				  </header>
+				
+					<fieldset>
+						<section *ngFor="let field of sigmaForm.fields">
+							<div *ngIf="field.inputType == 'text'">			
+						      <label [ngClass]="{'input':true, 'state-success':form.get(field.code).valid && form.get(field.code).touched, 'state-error':form.get(field.code).invalid && (form.get(field.code).touched || form.get(field.code).dirty)}"><i *ngIf="field.icon != null" class="icon-append fa {{field.icon}}"></i>
+						        <input type="text" [id]="field.code" [name]="field.name" [placeholder]="field.placeholder" [value]="field.value" [(ngModel)]="field.value" [formControlName]="field.code"/>
+						        <b *ngIf="field.tooltip" class="tooltip tooltip-bottom-right">{{field.tooltip}}</b> 						        
+						        </label>
+						        {{field.code}}:{{ form.get(field.code).errors | json}}
+						        <control-messages [control]="form.get(field.code)" [field]="field" *ngIf="form.get(field.code).errors && form.get(field.code).touched"></control-messages>
+						    </div>
+						    <!-- 
+							<div *ngIf="field.inputType == 'checkbox'">			
+						      <label class="checkbox">
+						        <input type="checkbox" name="{{field.name}}" id="{{field.id}}" [(ngModel)]="field.value" required="{{field.required}}"/>
+						        <i></i>{{field.placeholder}}
+						      </label>
+						    </div>
+						     -->
+						</section>
+					</fieldset>
+  <footer> {{form.value | json}} {{form.status | json}} {{ 'status:'+form.get('fieldName1').status | json}} {{ 'pristine:'+form.get('fieldName1').pristine | json}} {{ 'untouched:'+form.get('fieldName1').untouched | json}} {{ 'valid:'+form.get('fieldName1').valid | json}} {{ 'invalid:'+form.get('fieldName1').invalid | json}}
+    <button type="button" class="btn btn-primary" (click)="onClick($event)" >
+      Validate Form
+    </button>
+  </footer>
+				</form>
+
+            </div>
+            <!-- end widget content -->
+
+          </div>
+          <!-- end widget div -->
+
+        </sa-widget>
+</article>
+</div>
+</sa-widgets-grid>
+</div>

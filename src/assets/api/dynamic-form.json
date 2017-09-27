@@ -1,0 +1,55 @@
+{
+	"header":"TestHeader",
+	"fields":[
+		{
+			"code":"fieldName1",
+			"name":"field1Name",
+			"grid":"",
+			"inputType":"text",
+			"icon":"fa-user",
+			"label":"",
+			"placeholder":"field1",
+			"maxlength":"",
+			"minlength":"",
+			"disabled":"",
+			"tooltip":"adsadasds",
+			"popover":"",
+			"value":"",
+			"validator":
+				[
+					{"type":"required","message":"Field Field1 required"},
+					{"type":"rest","message":"Ini validasi Rest","path":"/hihi"}
+				]					
+		},
+		{
+			"code":"fieldName2",
+			"name":"field2Name",
+			"grid":"",
+			"inputType":"text",
+			"icon":null,
+			"label":"",
+			"placeholder":"field2",
+			"maxlength":"",
+			"minlength":"",
+			"disabled":"",
+			"tooltip":"eh ada tooltip",
+			"popover":"",
+			"value":""
+		},
+		{
+			"code":"fieldName3",
+			"name":"field3Name",
+			"grid":"",
+			"inputType":"text",
+			"icon":null,
+			"label":"",
+			"placeholder":"field2",
+			"maxlength":"",
+			"minlength":"",
+			"disabled":"",
+			"tooltip":"eh ada tooltip",
+			"popover":"",
+			"value":""
+		}
+	]
+}
